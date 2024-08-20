@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
   final viewModel = Get.put(LoginController());
   @override
   void initState() {
-    viewModel.autoLogin();
+    // viewModel.autoLogin();
     super.initState();
   }
 

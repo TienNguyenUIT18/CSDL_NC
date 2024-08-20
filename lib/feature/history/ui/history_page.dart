@@ -8,6 +8,7 @@ import 'package:money_wise/core/helper/base_color.dart';
 import 'package:money_wise/feature/history/model/history.dart';
 import 'package:money_wise/feature/history/ui/history_viewmodel.dart';
 import 'package:money_wise/feature/history/widgets/list_history.dart';
+import 'package:money_wise/feature/login/ui/login_page.dart';
 
 class HistoryPage extends StatefulWidget {
   const HistoryPage({super.key});
@@ -21,22 +22,27 @@ class _HistoryPageState extends State<HistoryPage> {
 
   @override
   void initState() {
-    viewModel.getAllMonth();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return CorePage(
-      body: Obx(
-        () => SizedBox(
-          child: ListHistory(
-            scrollController: viewModel.historyScrollCtrl,
-            histories: viewModel.histories,
-            onRefresh: () => viewModel.getAllMonth(),
+      body: Column
+        (
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          RoundBtn(
+            onTap: () {
+              Get.offAll(LoginPage());
+            },
+            text: "Đăng xuất",
+            size: Size(double.infinity, 50.h),
+            bgColor: Colors.red,
           ),
-        ),
-      ),
+          SizedBox(height: 16.h,)
+        ],
+      )
     );
   }
 }

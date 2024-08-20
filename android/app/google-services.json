@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "309126348542",
+    "project_id": "money-wisely-5d751",
+    "storage_bucket": "money-wisely-5d751.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309126348542:android:e55772ed5bf5e034662faf",
+        "android_client_info": {
+          "package_name": "money.wisely.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309126348542-uqqdd1v340bu0s07ftcesggfdd2pug4j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1HxWyd_xRlHd0G-qVZaRyvsqSpwOixbQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309126348542-uqqdd1v340bu0s07ftcesggfdd2pug4j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

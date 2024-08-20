@@ -39,8 +39,8 @@ class _DashboardPageState extends State<DashboardPage> {
           },
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.history),
-              label: 'Lịch sử',
+              icon: Icon(Icons.settings),
+              label: 'Cài đặt',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
