@@ -41,7 +41,17 @@ class _HomePageState extends State<HomePage> {
               ),
               Center(
                 child: Text(
-                  "Hôm nay",
+                  "Xin chào,",
+                  style: TextStyle(
+                    fontSize: 36.sp,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              Center(
+                child: Text(
+                  "Tien Nguyen",
                   style: TextStyle(
                     fontSize: 36.sp,
                     fontWeight: FontWeight.w900,
@@ -50,114 +60,105 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               SizedBox(
-                height: 8.h,
+                height: 24.h,
               ),
               Center(
-                child: Obx(
-                  () => Text(
-                    "${viewModel.usedAmount} K",
-                    style: TextStyle(
-                      fontSize: 24.sp,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white,
-                    ),
+                child: Text(
+                  "Hoạt động hôm nay lúc",
+                  style: TextStyle(
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
                   ),
                 ),
               ),
-            ],
-          ),
-          Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 300.h,
-                  height: 300.h,
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Container(
-                        width: 295.h,
-                        height: 295.h,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Container(
-                        width: 280.h,
-                        height: 280.h,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Container(
-                        width: 260.h,
-                        height: 260.h,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Color.fromARGB(255, 235, 102, 93),
-                        ),
-                      ),
-                      Container(
-                        width: 240.h,
-                        height: 240.h,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.white,
-                        ),
-                        child: Center(
-                          child: SizedBox(
-                            width: 150.w,
-                            height: 50.h,
-                            child: TextField(
-                              controller: amountInp,
-                              showCursor: false,
-                              textAlign: TextAlign.center,
-                              keyboardType: TextInputType.number,
-                              style: TextStyle(fontSize: 48.sp, fontWeight: FontWeight.bold, color: BaseColor.primaryColor),
-                              decoration: InputDecoration(
-                                hintText: "+",
-                                border: InputBorder.none,
-                                hintStyle: TextStyle(
-                                  fontSize: 48.sp,
+              Center(
+                child: Text(
+                  "08:25 AM",
+                  style: TextStyle(
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+
+              SizedBox(
+                height: 24.h,
+              ),
+              Center(
+                child: Text(
+                  "Số giờ làm việc hôm nay",
+                  style: TextStyle(
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
+              Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 300.h,
+                      height: 300.h,
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Container(
+                            width: 295.h,
+                            height: 295.h,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.black,
+                            ),
+                          ),
+                          Container(
+                            width: 280.h,
+                            height: 280.h,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Container(
+                            width: 260.h,
+                            height: 260.h,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color.fromARGB(255, 235, 102, 93),
+                            ),
+                          ),
+                          Container(
+                            width: 240.h,
+                            height: 240.h,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white,
+                            ),
+                            child: Center(
+                              child: Text(
+                                "2h:11p",
+                                style: TextStyle(
+                                  fontSize: 60.sp,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.grey,
                                 ),
                               ),
                             ),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-                Container(
-                  padding: EdgeInsets.only(top: 16.h),
-                  width: 300.w,
-                  child: RoundTextInput(
-                    showBorder: true,
-                    controller: reasonInp,
-                    contentColors: Colors.white,
-                    hintText: "Nội dung",
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 16.h),
-                  child: RoundBtn(
-                    onTap: () {
-                      viewModel.insertPay(amountInp.text, reasonInp.text);
-                      FocusScope.of(context).unfocus();
-                      amountInp.clear();
-                      reasonInp.clear();
-                    },
-                    text: "Lưu",
-                    size: Size(100.w, 50.h),
-                    bgColor: Colors.orange,
-                  ),
-                )
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),

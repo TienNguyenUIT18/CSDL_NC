@@ -28,21 +28,48 @@ class _HistoryPageState extends State<HistoryPage> {
   @override
   Widget build(BuildContext context) {
     return CorePage(
-      body: Column
-        (
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          RoundBtn(
-            onTap: () {
-              Get.offAll(LoginPage());
-            },
-            text: "Đăng xuất",
-            size: Size(double.infinity, 50.h),
-            bgColor: Colors.red,
+        body: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Xin chào,",
+                style: TextStyle(
+                  fontSize: 60.sp,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.white,
+                ),
+              ),
+              Center(
+                child: Text(
+                  "Tien Nguyen",
+                  style: TextStyle(
+                    fontSize: 36.sp,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ],
           ),
-          SizedBox(height: 16.h,)
-        ],
-      )
-    );
+        ),
+        Spacer(),
+        RoundBtn(
+          onTap: () {
+            Get.offAll(LoginPage());
+          },
+          text: "Đăng xuất",
+          size: Size(double.infinity, 50.h),
+          bgColor: Colors.red,
+        ),
+        SizedBox(
+          height: 16.h,
+        )
+      ],
+    ));
   }
 }

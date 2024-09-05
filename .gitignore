@@ -47,3 +47,6 @@ app.*.map.json
 GoogleService-Info.plist
 google-services.json
 lib/gen
+
+# FVM Version Cache
+.fvm/
